@@ -1,0 +1,345 @@
+/**************** LOGIN BOX *******************/
+
+.qwebirc-centrebox {
+  height: 100%;
+  width: 100%;
+}
+
+.qwebirc-centrebox table {
+  width: 100%;
+}
+
+.qwebirc-centrebox table table {
+  width: auto;
+}
+
+.qwebirc-loginbox .tr1 td {
+  width: 100%;
+  text-align: center;
+}
+
+.qwebirc-loginbox .tr1 td h1 {
+  padding-top: 0em;
+  margin-top: 0em;
+}
+
+.qwebirc-loginbox .tr2 td {
+  vertical-align: top;
+}
+
+.qwebirc-loginbox .tr2 table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/**************** CONFIRM LOGIN BOX *******************/
+.qwebirc-confirmbox {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qwebirc-confirmbox .tr1 td {
+  width: 100%;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.qwebirc-confirmbox .tr2 td {
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+/**************** ABOUT PANE *******************/
+
+.qwebirc-paneAbout {
+  font-size: 1em !important;
+  text-align: center;
+}
+
+.qwebirc-paneAbout p {
+  font-size: 0.8em;
+  margin: 0.5em 2em 0 2em;
+}
+
+.qwebirc-paneAbout table {
+  display: inline-block;
+}
+
+.qwebirc-paneAbout ul {
+  text-align: left;
+  font-size: 0.8em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.qwebirc-paneAbout h1 {
+  font-weight: normal;
+  font-size: 2em;
+  padding: 0.2em 0 0 0;
+  margin: 0;
+}
+
+.qwebirc-paneAbout h2 {
+  font-weight: normal;
+  font-size: 0.8em;
+  padding: 0 0 0.2em 0;
+  margin: 0;
+}
+
+/**************** EMBEDDED WIZARD *******************/
+ div.qwebirc-paneEmbed {
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.qwebirc-paneEmbed input.text {
+  width: 300px;
+}
+
+.qwebirc-paneEmbed input.iframetext {
+  width: 95%;
+}
+
+.qwebirc-paneEmbed div.wizardcontrols {
+}
+
+.qwebirc-paneEmbed .wizardcontrols input {
+  width: 70px;
+}
+
+/**************** PRIVACY POLICY PANE *******************/
+
+.qwebirc-panePrivacyPolicy {
+  font-size: 1em !important;
+  text-align: center;
+}
+
+.qwebirc-panePrivacyPolicy p {
+  font-size: 0.8em;
+  margin: 0 2em;
+}
+
+.qwebirc-panePrivacyPolicy h1 {
+  font-weight: normal;
+  font-size: 2em;
+  padding: 0.2em 0;
+  margin: 0 0 0.5em 0;
+}
+
+.qwebirc-panePrivacyPolicy h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0.1em 0;
+}
+
+.qwebirc-panePrivacyPolicy .monospace {
+  font-family: Consolas, "Lucida Console", monospace;
+}
+
+/****** FEEDBACK ***********/
+
+.qwebirc-paneFeedback {
+  font-size: 1em !important;
+  text-align: center;
+}
+
+.qwebirc-paneFeedback .enterarea {
+  font-size: 0.8em;
+  margin: 0 2em;
+}
+
+.qwebirc-paneFeedback h1 {
+  font-weight: normal;
+  font-size: 2em;
+  padding: 0.2em 0;
+  margin: 0 0 0.5em 0;
+}
+
+.qwebirc-paneFeedback .monospace {
+  font-family: Consolas, "Lucida Console", monospace;
+}
+
+/************* FAQ *****************/
+
+.qwebirc-paneFAQ {
+  font-size: 1em !important;
+  text-align: center;
+}
+
+.qwebirc-paneFAQ p {
+  font-size: 0.8em;
+  margin: 0 2em;
+}
+
+.qwebirc-paneFAQ h1 {
+  font-weight: normal;
+  font-size: 2em;
+  padding: 0.2em 0;
+  margin: 0 0 0.5em 0;
+}
+
+.qwebirc-paneFAQ h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0.1em 0;
+}
+
+.qwebirc-paneFAQ .monospace {
+  font-family: Consolas, "Lucida Console", monospace;
+}
+
+.qwebirc .loading {
+  padding-left: 4px;
+  padding-top: 3px;
+  font-size: 0.8em;
+}
+
+/************* OPTIONS *****************/
+
+.qwebirc-paneOptions div.hue-slider {
+  margin-top: 5px;
+  border: 0px solid black;
+  width: 360px;
+  height: 8px;
+  background-image: url(../images/hue.png);
+}
+
+.qwebirc-paneOptions div.sat-slider {
+  margin-top: 5px;
+  border: 0px solid black;
+  width: 360px;
+  height: 8px;
+  background-image: url(../images/saturation.png);
+}
+
+.qwebirc-paneOptions div.light-slider {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  border: 0px solid black;
+  width: 360px;
+  height: 8px;
+  background-image: url(../images/lightness.png);
+}
+
+.qwebirc-paneOptions div .knob {
+  width: 8px;
+  height: 16px;
+  top: -5px;
+  opacity: 0.75;
+  background: grey;
+  border: 1px solid black;
+}
+
+.qwebirc-paneOptions .hexform {
+  display: inline;
+  margin-right: 3px;
+}
+
+/************* LIST *****************/
+
+.qwebirc-paneList table {
+  width: 100%;
+}
+
+.qwebirc-paneList .viewchange {
+  width: 15em;
+}
+
+.qwebirc-paneList .hoverhint {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.qwebirc-paneList .filterbox {
+  padding: 0.3em;
+  text-align: center;
+}
+
+.qwebirc-paneList .filterbox .inputbox {
+  padding: 0 0.3em;
+}
+
+.qwebirc-paneList .pagebox {
+  padding: 0.3em;
+  text-align: center;
+}
+
+.qwebirc-paneList .listbox {
+  width: 100%;
+  clear: both;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
+.qwebirc-paneList .listbox .name {
+  width: 11em;
+}
+
+.qwebirc-paneList .listbox .users {
+  text-align: center;
+  width: 4em;
+}
+
+.qwebirc-paneList .listbox th {
+  padding: 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+}
+
+.qwebirc-paneList .listbox th.chantopic {
+  border-width: 1px 0 1px 0;
+}
+
+.qwebirc-paneList .listbox td {
+  padding: 0.3em;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+}
+
+.qwebirc-paneList .listbox td.loading {
+  padding: 0.3em;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+
+.qwebirc-paneList .listbox td.chantopic {
+  border-width: 0;
+}
+
+.qwebirc-paneList .listbox tr:hover td.chan1 {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.qwebirc-paneList .listbox tr:hover td.chan2 {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.qwebirc-paneList .listbox tr:hover td.name {
+  text-decoration: underline;
+}
+
+.qwebirc-paneList .tagbox {
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 0.5em 1.5em 0 1.5em;
+  text-align: justify;
+}
+
+.qwebirc-paneList .tagbox span {
+  margin: 0 0.15em;
+}
+
+.qwebirc-paneList .tagbox span:hover {
+  cursor: pointer;
+  cursor: hand;
+  text-decoration: underline;
+}

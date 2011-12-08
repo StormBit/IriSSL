@@ -1,0 +1,371 @@
+bg_topic=408080
+bg_lines=408080
+bg_tabbar=3C7878
+bg_tab_dropdown=418282
+bg_tab_hover=408080
+bg_tab_selected=408080
+bg_menu=408080
+bg_menu_hover=397373
+bg_header=418282
+bg_nicklist=408080
+bg_chanlist_header=397373
+bg_chanlist_1=408080
+bg_chanlist_2=3C7878
+bg_input=397373
+bg_topic_border=336666
+bg_tabbar_border=336666
+bg_tab_border=336666
+bg_tab_hover_border=264D4D
+bg_tab_selected_border=264D4D
+bg_input_border=336666
+bg_nicklist_border=336666
+bg_nicklist_selected_border=336666
+bg_menu_border=336666
+bg_chanlist_border=336666
+bg_lastpositionbar=336666
+fg_default_text=408080
+fg_topic_text=59B3B3
+fg_tabbar_dropdown_text=408080
+fg_tabbar_hilight_text=408080
+fg_sec_title_text=408080
+fg_sec_link_text=408080
+fg_sec_tab_text=408080
+fg_sec_tabbar_text=408080
+fg_sec_event_text=1A3333
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Verdana, sans-serif;
+  color: $(fg_default_text);
+}
+
+html {
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+  color: $(fg_sec_title_text);
+}
+
+a {
+  color: $(fg_sec_link_text);
+}
+
+input:not([type]),input[type="text"],input[type="password"] {
+  background: $(bg_input);
+  border: 1px solid $(bg_input_border);
+  color: $(fg_default_text);
+}
+
+#ircui {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.qwebirc-qui .dynamicpanel {
+  position: absolute;
+}
+.qwebirc-qui .widepanel, .leftboundpanel {
+  left: 0px;
+}
+.qwebirc-qui .widepanel {
+  width: 100%;
+}
+.qwebirc-qui .topboundpanel {
+  top: 0px;
+}
+.qwebirc-qui .rightboundpanel {
+  /*right: 0px;*/
+}
+.qwebirc-qui .bottomboundpanel {
+  color: red;
+}
+
+.qwebirc-qui .lines {
+  overflow: auto;
+  font-size: 0.8em;
+  background: $(bg_lines);
+}
+
+.qwebirc-qui .ircwindow {
+  font-family: Consolas, "Lucida Console", monospace, Verdana, sans-serif, "sans serif";
+}
+
+.qwebirc-qui .tab-invisible {
+  display: none;
+}
+
+.qwebirc-qui .input input.keyboard-input {
+  border: 0;
+  width: 100%;
+  margin: 0;
+  padding: 2px 0;
+}
+
+.qwebirc-qui .input input.mobile-input {
+  border: 0;
+  margin: 2px 0px 0px 0px;
+}
+
+.qwebirc-qui .input input.mobile-button {
+  position: absolute;
+  top: 0px;
+}
+
+.qwebirc-qui form {
+  margin: 0px;
+  padding: 0px;
+}
+
+.qwebirc-qui .topic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: $(bg_topic);
+  border-bottom: 1px dashed $(bg_topic_border);
+}
+
+.qwebirc-qui .topic .emptytopic {
+  color: $(fg_topic_text);
+}
+
+.qwebirc-qui .topic {
+  color: $(fg_topic_text);
+  padding-left: 5px;
+  font-size: 0.7em;
+  cursor: default;
+}
+
+.qwebirc-qui .outertabbar {
+  border-bottom: 1px solid $(bg_tabbar_border);
+  background: $(bg_tabbar);
+}
+
+.qwebirc-qui .tabbar {
+  margin-left: 27px;
+  font-size: 0.8em;
+  color: $(fg_sec_tabbar_text);
+  line-height: 24px;
+}
+
+.qwebirc-qui .tab {
+  border: 1px solid $(bg_tab_border);
+  padding: 2px;
+  cursor: default;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-right: -2px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $(fg_sec_tab_text);
+}
+
+.qwebirc-qui .tab:hover {
+  background: $(bg_tab_hover);
+  border: 1px solid $(bg_tab_hover_border);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.qwebirc-qui .tab-selected {
+  background: $(bg_tab_selected);
+  border: 1px solid $(bg_tab_selected_border);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.qwebirc-qui div.input {
+  background: $(bg_input);
+  border-top: 1px solid $(bg_input_border);
+}
+
+.qwebirc-qui .tabclose {
+  margin-left: 5px;
+  font-size: 0.7em;
+  line-height: 150%;
+  vertical-align: top;
+  padding-left: 3px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.qwebirc-qui a.tab-hilight-activity {
+  color: $(fg_sec_event_text);
+}
+
+.qwebirc-qui a.tab-hilight-speech {
+  font-weight: bold;
+  color: $(fg_sec_event_text);
+}
+
+.qwebirc-qui a.tab-hilight-us {
+  font-weight: bold;
+  color: $(fg_tabbar_hilight_text);
+}
+
+.qwebirc-qui .nicklist {
+  border-left: 1px solid $(bg_nicklist_border);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 140px;
+  overflow: auto;
+  background: $(bg_nicklist);
+  font-size: 0.7em;
+}
+
+.qwebirc-qui .nicklist a {
+  display: block;
+  text-decoration: none;
+  cursor: default;
+  border-top: 1px solid $(bg_nicklist);
+  border-bottom: 1px solid $(bg_nicklist);
+  padding-left: 1px;
+}
+
+.qwebirc-qui .nicklist a.selected {
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  border-bottom: $(bg_nicklist_selected_border) 1px solid;
+  cursor: default;
+}
+
+.qwebirc-qui .nicklist a.selected-middle {
+  border-top: $(bg_nicklist_selected_border) 1px solid;
+}
+
+.qwebirc-qui .nicklist a.selected .menu {
+  font-weight: normal;
+}
+
+div#noscript {
+  text-align: center;
+  font-weight: bold;
+}
+
+.qwebirc-qui .nicklist div.menu {
+  margin: 0px 0px 0px 5px;
+}
+
+.qwebirc-qui .nicklist div.menu a {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.qwebirc-qui .hyperlink-whois, .hyperlink-accinfo, .hyperlink-channel {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.qwebirc-qui .hyperlink-whois:hover, .hyperlink-accinfo:hover, .hyperlink-channel:hover {
+  text-decoration: underline;
+}
+
+.qwebirc-qui .outertabbar .dropdown-tab {
+  float: left;
+  width: 24px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.qwebirc-qui .dropdownmenu {
+  z-index: 100;
+  border: 1px solid $(bg_menu_border);
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: $(bg_menu);
+}
+
+.qwebirc-qui .dropdownmenu a {
+  display: block;
+  font-size: 0.7em;
+  cursor: pointer;
+  cursor: hand;  
+  padding-top: 1px;
+  padding-left: 3px;
+  padding-bottom: 1px;
+  padding-right: 3px;
+}
+
+.qwebirc-qui .dropdownmenu a:hover {
+  background: $(bg_menu_hover); /* IE is rubbish and doesn't like #FFFFFF or white */
+}
+
+.qwebirc-qui .dropdownhint {
+  position: relative;
+  left: -500px;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.7em;
+}
+
+.qwebirc-qui hr.lastpos {
+  border: none;
+  border-top: 1px solid $(bg_lastpositionbar);
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.qwebirc-paneAbout .header {
+  background-color: $(bg_header);
+}
+
+.qwebirc-paneFAQ h1 {
+  background-color: $(bg_header);
+}
+
+.qwebirc-paneFeedback h1 {
+  background-color: $(bg_header);
+}
+
+.qwebirc-panePrivacyPolicy h1 {
+  background-color: $(bg_header);
+}
+
+
+.qwebirc-paneList .listbox {
+  border-color: $(bg_chanlist_border);
+}
+
+.qwebirc-paneList .listbox th {
+  border-color: $(bg_chanlist_border);
+  background-color: $(bg_chanlist_header);
+}
+
+.qwebirc-paneList .listbox td {
+  border-color: $(bg_chanlist_border);
+}
+
+.qwebirc-paneList .listbox td.chan1 {
+  background-color: $(bg_chanlist_1);
+}
+
+.qwebirc-paneList .listbox td.chan2 {
+  background-color: $(bg_chanlist_2);
+}
+
+.qwebirc-paneList .listbox tr:hover td.chan1 {
+  background-color: $(bg_chanlist_header);
+}
+
+.qwebirc-paneList .listbox tr:hover td.chan2 {
+  background-color: $(bg_chanlist_header);
+}
+
+.qwebirc-paneList .tagbox span:hover {
+  background-color: $(bg_chanlist_header);
+}
