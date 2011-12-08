@@ -224,7 +224,7 @@ class QWebIRCFactory(protocol.ClientFactory):
 def createIRC(*args, **kwargs):
   f = QWebIRCFactory(*args, **kwargs)
   if config.irc["port"][0] == "+":
-    reactor.connectSSL(config.irc["server"], int(config.irc["port"][0:]), f, reactor.connectTCP())
+    reactor.connectSSL(config.irc["server"], int(config.irc["port"][0:]), f, ssl.ClientContextFactory())
   else:
     reactor.connectTCP(config.irc["server"], int(config.irc["port"]), f)
   return f
