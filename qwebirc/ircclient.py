@@ -3,7 +3,7 @@ import base64, time
 import qwebirc.config as config
 from threading import Timer
 from twisted.words.protocols import irc
-from twisted.internet import reactor, protocol
+from twisted.internet import reactor, protocol, ssl
 from twisted.web import resource, server
 from twisted.protocols import basic
 
@@ -223,7 +223,10 @@ class QWebIRCFactory(protocol.ClientFactory):
 
 def createIRC(*args, **kwargs):
   f = QWebIRCFactory(*args, **kwargs)
-  reactor.connectTCP(config.irc["server"], config.irc["port"], f)
+  if config.irc["port"][0] == "+":
+    reactor.connectSSL(config.irc["server"], int(config.irc["port"][0:]), f, reactor.connectTCP())
+  else:
+    reactor.connectTCP(config.irc["server"], int(config.irc["port"]), f)
   return f
 
 if __name__ == "__main__":

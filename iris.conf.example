@@ -42,6 +42,7 @@ syslog_port: 514
 server: irc.myserver.com
 
 # PORT: Port of IRC server to connect to.
+# Prefix this with a + to use a SSL connection.
 port: 6667
 
 # REALNAME: The realname field for clients connecting through the
