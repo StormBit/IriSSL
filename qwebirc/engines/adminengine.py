@@ -5,21 +5,29 @@ import copy, time
 import qwebirc.config as config
 
 HEADER = """
-<html><head><link rel="stylesheet" href="%scss/qui.css"></link><link rel="stylesheet" href="%scss/dialogs.css"></link></head><body class="qwebirc-qui">
-<div class="qwebirc-aboutpane lines" style="bottom: 0px; top: 0px; position: absolute; right: 0px; left: 0px;">
-<div class="header"> 
-  <table> 
-    <tr> 
-      <td><img src="/images/iris.png" alt="Iris" title="Iris"/></td> 
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
-      <td align="center"><div class="title">Iris</div><div class="version">AdminEngine</div></td>
-    </tr> 
-  </table> 
-</div> 
-<div class="mainbody" style="bottom: 100px">
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="%scss/qui.css">
+    <link rel="stylesheet" type="text/css" href="%scss/dialogs.css">
+  </head>
+  <body class="qwebirc-qui">
+  <div class="qwebirc-aboutpane lines" style="bottom: 0px; top: 0px; position: absolute; right: 0px; left: 0px;">
+  <div class="header"> 
+    <table> 
+      <tr> 
+        <td><img src="/images/iris.png" alt="Iris" title="Iris"/></td> 
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+        <td align="center"><div class="title">Iris</div><div class="version">AdminEngine</div></td>
+      </tr> 
+    </table> 
+  </div> 
+  <div class="mainbody" style="bottom: 100px">
 """ % (config.frontend["base_url"], config.frontend["base_url"])
 
-FOOTER = """</div></body></html>"""
+FOOTER = """      </div>
+  </body>
+</html>"""
 
 class AdminEngineException(Exception):
   pass
