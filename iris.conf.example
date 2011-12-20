@@ -42,7 +42,7 @@ syslog_port: 514
 server: irc.myserver.com
 
 # PORT: Port of IRC server to connect to.
-# Prefix this with a + to use a SSL connection.
+# Prefix this with a + to use an SSL connection.
 port: 6667
 
 # REALNAME: The realname field for clients connecting through the
@@ -124,6 +124,9 @@ chan_list_count: 3
 # send feedback directly from Iris, when forwards it via email.
 # They require a backend restart to change.
 [feedbackengine]
+
+# ENABLE FEEDBACK ENGINE: Whether or not the feedback engine is enabled
+enable: True
 
 # FEEDBACK FROM: E-mail address that feedback will originate from.
 from: moo@moo.com

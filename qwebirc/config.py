@@ -121,6 +121,12 @@ def __interpret_config():
     else:
         ui["privacy"] = True
 
+    # Let's ensure that the feedback engine knows it's place.
+    if not "enable" in feedback:
+        ui["feedback"] = False
+    else:
+        ui["feedback"] = True
+
 
 def js_config():
     options = {

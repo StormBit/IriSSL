@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # this entire thing is a hack and badly needs reimplementing
-import bin.compile
+import bin.compile, warnings
 bin.compile.vcheck()
+warnings.filterwarnings('ignore','the MimeWriter',DeprecationWarning,'twisted')
 
 DEFAULT_PORT = 9090
 

@@ -1,8 +1,20 @@
 qwebirc.ui.Panes.Feedback = {
   title: "Feedback",
-  command: function(session) { return "FEEDBACK"; },
-  menuitem: function(session) { return "Feedback"; },
-  menupos: 500
+  command: function(session) {
+    if (conf.ui.feedback) {
+      return "FEEDBACK";
+    } else {
+      return null;
+    }
+  },
+  menuitem: function(session) {
+    if (conf.ui.feedback) {
+      return "Feedback";
+    } else {
+      return null;
+    }
+  },
+  menupos: 700
 };
 
 qwebirc.ui.Panes.Feedback.pclass = new Class({
