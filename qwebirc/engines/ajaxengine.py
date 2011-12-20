@@ -1,7 +1,7 @@
 from twisted.web import resource, server, static, error as http_error
 from twisted.names import client
 from twisted.internet import reactor, error
-import md5, sys, os, time, traceback, socket
+import hashlib, sys, os, time, traceback, socket
 import qwebirc.ircclient as ircclient
 from adminengine import AdminEngineAction
 from qwebirc.util import HitCounter
@@ -11,7 +11,7 @@ import qwebirc.config as config
 Sessions = {}
 
 def get_session_id():
-  return md5.md5(os.urandom(16)).hexdigest()
+  return hashlib.md5(os.urandom(16)).hexdigest()
 
 class BufferOverflowException(Exception):
   pass
