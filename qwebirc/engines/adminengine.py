@@ -5,7 +5,7 @@ import copy, time
 import qwebirc.config as config
 
 HEADER = """
-<html><head><link rel="stylesheet" href="/css/qui.css"></link><link rel="stylesheet" href="/css/dialogs.css"></link></head><body class="qwebirc-qui">
+<html><head><link rel="stylesheet" href="%s/css/qui.css"></link><link rel="stylesheet" href="%s/css/dialogs.css"></link></head><body class="qwebirc-qui">
 <div class="qwebirc-aboutpane lines" style="bottom: 0px; top: 0px; position: absolute; right: 0px; left: 0px;">
 <div class="header"> 
   <table> 
@@ -17,7 +17,7 @@ HEADER = """
   </table> 
 </div> 
 <div class="mainbody" style="bottom: 100px">
-"""
+""" % (config.frontend["base_url"], config.frontend["base_url"])
 
 FOOTER = """</div></body></html>"""
 

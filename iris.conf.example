@@ -126,7 +126,7 @@ chan_list_count: 3
 [feedbackengine]
 
 # ENABLE FEEDBACK ENGINE: Whether or not the feedback engine is enabled
-enable: True
+enabled: true
 
 # FEEDBACK FROM: E-mail address that feedback will originate from.
 from: moo@moo.com

@@ -82,7 +82,7 @@ class RootSite(server.Site):
     register(engines.AdminEngine, "adminengine", services)
     if config.athemeengine["xmlrpc_path"]:
       register(engines.AthemeEngine, "a")
-    if config.feedbackengine["enable"]:
+    if config.feedbackengine["enabled"]:
       register(engines.FeedbackEngine, "feedback")
     
 mimetypes.types_map[".ico"] = "image/vnd.microsoft.icon"
