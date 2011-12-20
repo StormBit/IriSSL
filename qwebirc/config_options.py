@@ -18,7 +18,7 @@ booleans = [
     ("atheme", "chan_list_cloud_view"),
     ("atheme", "chan_list_on_start"),
     ("athemeengine", "chan_list_enabled"),
-    ("feedback", "enable"),
+    ("feedbackengine", "enabled"),
     ("frontend", "prompt"),
     ("frontend", "chan_prompt"),
     ("frontend", "chan_autoconnect"),
