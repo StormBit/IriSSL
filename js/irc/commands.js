@@ -34,6 +34,13 @@ qwebirc.irc.Commands = new Class({
 
     this.newQueryLine(target, "ACTION", args, {"@": this.session.irc.getNickStatus(target, this.session.irc.nickname)});
   }],
+  cmd_SLAP: [true, undefined, undefined, function(victim) {
+    if(args == undefined)
+      return;
+    if(!this.send("PRIVMSG " + this.getActiveWindow().name + " :\x01ACTION slaps " + victim[1] + " around a bit with a trout\x01"))
+      return;
+    this.newQueryLine(this.getActiveWindow().name, "ACTION slaps", victim, " around a bit with a trout" {"@": this.session.irc.getNickStatus(this.getActiveWindow().name, this.session.irc.nickname)});
+  }],
   cmd_CTCP: [false, 3, 2, function(args) {
     var target = args[0];
     var type = args[1].toUpperCase();

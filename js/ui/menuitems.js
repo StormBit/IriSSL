@@ -48,6 +48,10 @@ qwebirc.ui.MENU_ITEMS = function() {
       predicate: true
     },
     {
+      text: "slap",
+      fn: function(nick) { this.session.irc.exec("/SLAP " + nick); },
+    },
+    {
       text: "kick", /* TODO: disappear when we're deopped */
       fn: function(nick) { this.session.irc.exec("/KICK " + nick + " wibble"); },
       predicate: maybeOpped
