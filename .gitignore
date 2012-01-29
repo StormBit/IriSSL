@@ -18,4 +18,4 @@ static/{ugly,swm,mocha,q}ui{,debug}.html
 ssl
 screenlog*
 syslog.py
-run.sh
+
