@@ -50,6 +50,7 @@ qwebirc.ui.MENU_ITEMS = function() {
     {
       text: "slap",
       fn: function(nick) { this.session.irc.exec("/ME slaps" + nick + " around a bit with a large trout."); },
+      predicate: true
     },
     {
       text: "kick", /* TODO: disappear when we're deopped */
