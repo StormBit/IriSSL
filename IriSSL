@@ -1,0 +1,46 @@
+#!/bin/sh
+COMMAND="/usr/bin/authbind /usr/bin/python2.6 run.py"
+case "$1" in
+  start)
+    if ps ax|grep -v grep|grep `cat twistd.pid` > /dev/null
+    then
+      echo "IriSSL is already running, exiting."
+      exit 1
+    else
+      echo "Starting IriSSL."
+      $COMMAND
+    fi;;
+
+  cron)
+    if ps ax|grep -v grep|grep `cat twistd.pid` > /dev/null
+    then
+      exit 1
+    else
+      $COMMAND > /dev/null
+      exit 1
+    fi;;
+
+  stop)
+    echo "Stopping IriSSL."
+    kill -9 `cat twistd.pid`
+    rm -f twistd.pid;;
+
+  restart)
+    kill -9 `cat twistd.pid`
+    rm -f twistd.pid
+    echo "Restarting IriSSL."
+    $COMMAND;;
+
+  compile)
+    /usr/bin/env python2.6 compile.py
+    echo "Compile Completed.";;
+
+  update)
+    git fetch;;
+  *)
+    echo "Usage: ./IriSSL {start|stop|cron|compile|update}"
+    exit 1;;
+esac
+
+exit 0
+
