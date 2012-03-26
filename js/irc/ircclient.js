@@ -93,6 +93,16 @@ qwebirc.irc.IRCClient = new Class({
     if(w)
       w.updateNickList(sortednames);
   },
+  renameWindow: function(oldname, newname) {
+    var oldwindow = ui.getWindow(oldname);
+    if(!oldwindow || ui.getWindow(newname))
+      return;
+    var window = this.ui.renameWindow(oldwindow, newname);
+    if(window) {
+      this.windows[this.toIRCLower(newname)] = window;
+      delete this.windows[this.toIRCLower(oldname)];
+    }
+  },
   newWindow: function(name, type, select) {
     var w = ui.getWindow(type, name);
     if(!w) {
@@ -307,7 +317,13 @@ qwebirc.irc.IRCClient = new Class({
       /* TODO: rename queries */
       this.updateNickList(c);
     }
-
+    
+    if(this.getQueryWindow(oldnick)) {
+      var found = true;
+      this.renameWindow(oldnick, newnick);
+      this.newLine(newnick, "NICK", {"n": oldnick, "w": newnick});
+    }
+    
     /* this is quite horrible */
     if(!found)
       this.newServerLine("NICK", {"w": newnick, n: user.hostToNick(), h: user.hostToHost(), "-": this.nickname});
@@ -445,7 +461,8 @@ qwebirc.irc.IRCClient = new Class({
         ui.closeWindow(w);
     }
     this.tracker = undefined;
-    
+
+    qwebirc.connected = false;    
     this.newServerLine("DISCONNECT", {"m": message});
   },
   nickOnChanHasPrefix: function(nick, channel, prefix) {
@@ -493,6 +510,7 @@ qwebirc.irc.IRCClient = new Class({
     this.parent(key, value);
   },
   connected: function() {
+    qwebirc.connected = true;
     this.newServerLine("CONNECT");
   },
   serverError: function(message) {
