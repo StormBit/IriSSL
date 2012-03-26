@@ -289,8 +289,14 @@ qwebirc.options.Options = [
   {
     category: "ui",
     option: "hide_joinparts",
-    label: "Hide JOINS/PARTS/QUITS"
+    label: "Hide JOIN/PART/QUIT events"
   },
+  {
+    category: "ui",
+    option: "show_nicklist",
+    label: "Show nicklist in channels"
+  },
+
   {
     category: "ui",
     option: "fg_color",
