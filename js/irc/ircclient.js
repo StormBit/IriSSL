@@ -318,7 +318,7 @@ qwebirc.irc.IRCClient = new Class({
       this.updateNickList(c);
     }
     
-    if(this.getQueryWindow(oldnick)) {
+    if(this.ui.getWindow(this, qwebirc.ui.WINDOW_QUERY, oldnick)) {
       var found = true;
       this.renameWindow(oldnick, newnick);
       this.newLine(newnick, "NICK", {"n": oldnick, "w": newnick});
