@@ -5,13 +5,13 @@ qwebirc.irc.PMODE_REGULAR_MODE = 3;
 
 qwebirc.irc.RegisteredCTCPs = {
   "VERSION": function(x) {
-    return "iris v" + qwebirc.VERSION + " -- " + qwebirc.util.browserVersion();
+    return "IriSSL v" + qwebirc.VERSION + " -- " + qwebirc.util.browserVersion();
   },
-  "USERINFO": function(x) { return "qwebirc"; },
+  "USERINFO": function(x) { return window == window.top ? "direct" : document.referrer; },
   "TIME": function(x) { return qwebirc.irc.IRCDate(new Date()); },
   "PING": function(x) { return x; },
   "CLIENTINFO": function(x) { return "PING VERSION TIME USERINFO CLIENTINFO WEBSITE"; },
-  "WEBSITE": function(x) { return window == window.top ? "direct" : document.referrer; }
+  "WEBSITE": function(x) { return "http://github.com/StormBit/IriSSL" }
 };
 
 qwebirc.irc.BaseIRCClient = new Class({
