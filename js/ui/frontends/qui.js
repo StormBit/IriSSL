@@ -311,7 +311,7 @@ qwebirc.ui.QUI.JSUI = new Class({
     bottom.setStyle("top", (docsize.y - bottomsize.y));
     this.fireEvent("reflow");
   },
-  showChannel: function(state, showNicklist) {
+  showChannel: function(state, nicklistVisible) {
     var display = "none";
     if(state)
       display = "block";
