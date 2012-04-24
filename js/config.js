@@ -11,6 +11,8 @@ qwebirc.config.load = function(config) {
 	config.frontend.initial_nick_default = config.frontend.initial_nick;
 	config.frontend.initial_chans_default = config.frontend.initial_chans;
 	config.frontend.prompt_default = config.frontend.prompt;
+	config.ui.nicklistVisible = true;
+	config.ui.maxlines = 1024;
 	config.ui.fg_color_default = config.ui.fg_color;
 	config.ui.fg_sec_color_default = config.ui.fg_sec_color;
 	config.ui.bg_color_default = config.ui.bg_color;
@@ -75,6 +77,13 @@ qwebirc.config.load = function(config) {
 			config.atheme.chan_list_on_start = true;
 		else
 			config.atheme.chan_list_on_start = false;
+	}
+
+	if ($defined(args["show_nicklist"])) {
+		if (args["show_nicklist"] == 1)
+			config.ui.nicklistVisible = true;
+		else
+			config.ui.nicklistVisible = false;
 	}
 
 	/* Load colours from query string. */

@@ -170,6 +170,8 @@ qwebirc.ui.Window = new Class({
     if($defined(element)) {
       var sd = this.scrolledDown();
       parent.appendChild(element);
+      if(parent.childNodes.length > qwebirc.ui.maxlines)
+        parent.removeChild(parent.firstChild);
       if(sd) {
         if(this.scrolltimer)
           $clear(this.scrolltimer);
